@@ -40,7 +40,7 @@ function CalculadoraMediaEscolar() {
     mediaEscola * quantidadeNotas - notas.reduce((acc, nota) => acc + nota, 0) + notaMinima;
 
   return (
-    <div style={{ textAlign: "center", color: resultado === "Reprovado" ? "#FF0000" : "#008000" }}>
+    <div class="tela" style={{ textAlign: "center", color: resultado === "Reprovado" ? "#FF0000" : "#008000" }}>
       <label>
         Quantidade de notas:
         <input type="number" value={quantidadeNotas} onChange={handleQuantidadeNotasChange} />
