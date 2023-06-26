@@ -41,6 +41,8 @@ function CalculadoraMediaEscolar() {
 
   return (
     <div class="tela" style={{ textAlign: "center", color: resultado === "Reprovado" ? "#FF0000" : "#008000" }}>
+      <h1>Média escolar</h1>
+      <p></p>
       <label>
         Quantidade de notas:
         <input type="number" value={quantidadeNotas} onChange={handleQuantidadeNotasChange} />
@@ -71,6 +73,7 @@ function CalculadoraMediaEscolar() {
           Para alcançar a média, substitua a nota {notaMinima.toFixed(2)} pela nota {notaNecessaria.toFixed(2)}
         </p>
       )}
+      <a href="https://github.com/Miguelito001"><img src="../pngwing.com.png" alt="github"></img></a>
     </div>
   );
 }
