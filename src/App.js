@@ -73,7 +73,7 @@ function CalculadoraMediaEscolar() {
           Para alcançar a média, substitua a nota {notaMinima.toFixed(2)} pela nota {notaNecessaria.toFixed(2)}
         </p>
       )}
-      <a href="https://github.com/Miguelito001"><img src="../pngwing.com.png" alt="github"></img></a>
+      <a href="https://github.com/Miguelito001">GITHUB</a>
     </div>
   );
 }
