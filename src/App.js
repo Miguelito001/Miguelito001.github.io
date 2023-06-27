@@ -9,20 +9,26 @@ function CalculadoraMediaEscolar() {
 
   const handleQuantidadeNotasChange = (event) => {
     const quantidade = parseInt(event.target.value);
-    setQuantidadeNotas(quantidade);
-    setNotas(new Array(quantidade).fill(0));
+    if (quantidade <= 50 && quantidade >= 0) {
+      setQuantidadeNotas(quantidade);
+      setNotas(new Array(quantidade).fill(0));
+    }
   };
 
   const handleMediaEscolaChange = (event) => {
     const media = parseFloat(event.target.value);
-    setMediaEscola(media);
+    if (media <= 10 && media >= 0) {
+      setMediaEscola(media);
+    }
   };
 
   const handleNotaChange = (index, event) => {
     const novaNota = parseFloat(event.target.value);
-    const novasNotas = [...notas];
-    novasNotas[index] = novaNota;
-    setNotas(novasNotas);
+    if (novaNota <= 10 && novaNota >= 0) {
+      const novasNotas = [...notas];
+      novasNotas[index] = novaNota;
+      setNotas(novasNotas);
+    }
   };
 
   const calcularMedia = () => {
@@ -66,7 +72,7 @@ function CalculadoraMediaEscolar() {
         Calcular Média
       </button>
       <br />
-      <p>Média do aluno: {mediaAluno.toFixed(2)}</p>
+      <p>Média do aluno: {Math.min(mediaAluno.toFixed(2), 10)}</p>
       <p>Resultado: <span style={{ color: resultado === "Reprovado" ? "#FF0000" : "#008000" }}>{resultado}</span></p>
       {resultado === "Reprovado" && (
         <p>
