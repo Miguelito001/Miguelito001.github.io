@@ -9,7 +9,7 @@ function CalculadoraMediaEscolar() {
 
   const handleQuantidadeNotasChange = (event) => {
     const quantidade = parseInt(event.target.value);
-    if (quantidade <= 50 && quantidade >= 0) {
+    if (quantidade <= 10 && quantidade >= 0) {
       setQuantidadeNotas(quantidade);
       setNotas(new Array(quantidade).fill(0));
     }
